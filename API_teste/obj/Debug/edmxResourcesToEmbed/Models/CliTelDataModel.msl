@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="CliTelDBContext">
+    <EntitySetMapping Name="tb_cliente">
+      <EntityTypeMapping TypeName="Models.tb_cliente">
+        <MappingFragment StoreEntitySet="tb_cliente">
+          <ScalarProperty Name="ID_CLI" ColumnName="ID_CLI" />
+          <ScalarProperty Name="Nome_CLI" ColumnName="Nome_CLI" />
+          <ScalarProperty Name="Endereco_CLI" ColumnName="Endereco_CLI" />
+          <ScalarProperty Name="Numero_CLI" ColumnName="Numero_CLI" />
+          <ScalarProperty Name="Bairro_CLI" ColumnName="Bairro_CLI" />
+          <ScalarProperty Name="Cidade_CLI" ColumnName="Cidade_CLI" />
+          <ScalarProperty Name="UF_Cli" ColumnName="UF_Cli" />
+          <ScalarProperty Name="CEP_Cli" ColumnName="CEP_Cli" />
+          <ScalarProperty Name="Telefone_CLI" ColumnName="Telefone_CLI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_telefone">
+      <EntityTypeMapping TypeName="Models.tb_telefone">
+        <MappingFragment StoreEntitySet="tb_telefone">
+          <ScalarProperty Name="ID_TEL" ColumnName="ID_TEL" />
+          <ScalarProperty Name="ID_CLI" ColumnName="ID_CLI" />
+          <ScalarProperty Name="Telefone_CLI" ColumnName="Telefone_CLI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

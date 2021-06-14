@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_cliente">
+          <Key>
+            <PropertyRef Name="ID_CLI" />
+          </Key>
+          <Property Name="ID_CLI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome_CLI" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Endereco_CLI" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Numero_CLI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Bairro_CLI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cidade_CLI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UF_Cli" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="CEP_Cli" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefone_CLI" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ModelsStoreContainer">
+          <EntitySet Name="tb_cliente" EntityType="Self.tb_cliente" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_cliente">
+          <Key>
+            <PropertyRef Name="ID_CLI" />
+          </Key>
+          <Property Name="ID_CLI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome_CLI" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Endereco_CLI" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Numero_CLI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Bairro_CLI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cidade_CLI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UF_Cli" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CEP_Cli" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefone_CLI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ClienteDBContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_cliente" EntityType="Self.tb_cliente" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="ClienteDBContext">
+          <EntitySetMapping Name="tb_cliente">
+            <EntityTypeMapping TypeName="Models.tb_cliente">
+              <MappingFragment StoreEntitySet="tb_cliente">
+                <ScalarProperty Name="ID_CLI" ColumnName="ID_CLI" />
+                <ScalarProperty Name="Nome_CLI" ColumnName="Nome_CLI" />
+                <ScalarProperty Name="Endereco_CLI" ColumnName="Endereco_CLI" />
+                <ScalarProperty Name="Numero_CLI" ColumnName="Numero_CLI" />
+                <ScalarProperty Name="Bairro_CLI" ColumnName="Bairro_CLI" />
+                <ScalarProperty Name="Cidade_CLI" ColumnName="Cidade_CLI" />
+                <ScalarProperty Name="UF_Cli" ColumnName="UF_Cli" />
+                <ScalarProperty Name="CEP_Cli" ColumnName="CEP_Cli" />
+                <ScalarProperty Name="Telefone_CLI" ColumnName="Telefone_CLI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
